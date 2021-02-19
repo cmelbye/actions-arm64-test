@@ -14,7 +14,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make
-      run: make
-    - name: run
-      run: ./main
+      run: make universal_app
+    - name: file intel
+      run: file x86_app
+    - name: file arm
+      run: file arm_app
+    - name: file universal
+      run: file universal_app
+    - name: run intel
+      run: ./x86_app
+    - name: run universal
+      run: ./universal_app
 
